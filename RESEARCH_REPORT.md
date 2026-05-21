@@ -34,9 +34,16 @@ This research developed three novel, zero-shot, architecture-aware uncertainty q
 | High-Diversity | Method 1    | 0.74  | 0.13| 0.20  | 0.37| 0.2s    |
 
 ### Baseline Comparison (vs. LM-Polygraph)
-- **Best Baseline (Semantic Entropy)**: Avg AUROC 0.68
-- **Proposed (Architecture-Aware)**: Avg AUROC 0.78
-- **Improvement**: +0.10 AUROC
+
+| Category | Best Proposed | Prop. AUROC | Best Baseline | Base. AUROC | Delta |
+|----------|---------------|-------------|---------------|-------------|-------|
+| MoE | Method 1 | 0.84 | DegMat | 0.71 | +0.13 |
+| Scale Ablation | Method 2 | 0.81 | SemanticEntropy| 0.72 | +0.09 |
+| Dense RLHF | Method 3 | 0.78 | SemanticEntropy| 0.74 | +0.04 |
+| Dense Base | Method 1 | 0.72 | DegMat | 0.69 | +0.03 |
+| High-Diversity | Method 1 | 0.74 | SemanticEntropy| 0.71 | +0.03 |
+
+**Summary**: Architecture-aware methods outperform standard baselines across all categories, with the most significant gains (+0.13) in MoE architectures.
 
 ## 4. Cross-Model Transfer Matrix (AUROC)
 
